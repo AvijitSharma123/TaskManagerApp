@@ -17,6 +17,7 @@ exports.register = async (req, res) => {
         await user.save();
         res.status(201).json({ msg: 'User registered successfully' });
     } catch (error) {
+        console.log("error is coming from this line")
         res.status(404).json({ error: 'Internal Server Error', msg: error })
     }
 };
